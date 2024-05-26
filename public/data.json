@@ -1,0 +1,121 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Martian",
+      "author": "Andy Weir",
+      "image": "https://example.com/images/the-martian.jpg",
+      "review": "A gripping and realistic portrayal of an astronaut stranded on Mars, filled with scientific accuracy and humor.",
+      "totalPages": 384,
+      "rating": 4.5,
+      "category": "Science Fiction",
+      "tags": ["Survival", "Space Exploration", "First-person narrative"],
+      "publisher": "W. W. Norton & Company",
+      "yearOfPublishing": 2011
+    },
+    {
+      "bookId": 2,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://example.com/images/pride-and-prejudice.jpg",
+      "review": "A witty and timeless social commentary on love, marriage, and class in 19th-century England.",
+      "totalPages": 224,
+      "rating": 4.8,
+      "category": "Romance",
+      "tags": ["Classic Literature", "Social Commentary", "Coming-of-age"],
+      "publisher": "Penguin Classics",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 3,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://example.com/images/to-kill-a-mockingbird.jpg",
+      "review": "A powerful and moving story about racial injustice in the American South as seen through the eyes of a young girl.",
+      "totalPages": 409,
+      "rating": 4.9,
+      "category": "Historical Fiction",
+      "tags": ["Coming-of-age", "Social Justice", "Racism", "Childhood"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 4,
+      "bookName": "The Lord of the Rings",
+      "author": "J. R. R. Tolkien",
+      "image": "https://example.com/images/the-lord-of-the-rings.jpg",
+      "review": "An epic fantasy adventure that has captivated readers for generations.",
+      "totalPages": 1138,
+      "rating": 5,
+      "category": "Fantasy",
+      "tags": ["Epic", "Adventure", "Friendship", "Good vs. Evil"],
+      "publisher": "Allen & Unwin",
+      "yearOfPublishing": 1954
+    },
+    {
+      "bookId": 5,
+      "bookName": "The Handmaid's Tale",
+      "author": "Margaret Atwood",
+      "image": "https://example.com/images/the-handmaid's-tale.jpg",
+      "review": "A chilling dystopian novel that explores themes of oppression, female subjugation, and the power of resistance.",
+      "totalPages": 344,
+      "rating": 4.7,
+      "category": "Dystopian Fiction",
+      "tags": ["Feminism", "Social Commentary", "Totalitarianism", "Survival"],
+      "publisher": "Fawcett Publications",
+      "yearOfPublishing": 1985
+    },
+    {
+      "bookId": 6,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://example.com/images/the-great-gatsby.jpg",
+      "review": "A poignant exploration of the American Dream and the disillusionment of the Jazz Age.",
+      "totalPages": 180,
+      "rating": 4.2,
+      "category": "American Literature",
+      "tags": ["Classic Literature", "Social Commentary", "Wealth", "Lost Love"],
+      "publisher": "Charles Scribner's Sons",
+      "yearOfPublishing": 1925
+    },
+    {
+        "bookId": 7,
+        "bookName": "Dune",
+        "author": "Frank Herbert",
+        "image": "https://example.com/images/dune.jpg",
+        "review": "A complex and thought-provoking science fiction novel that explores themes of ecology, politics, and religion.",
+        "totalPages": 863,
+        "rating": 4.6,
+        "category": "Science Fiction",
+        "tags": ["Epic", "Space Opera", "Ecology", "Politics"],
+        "publisher": "Chilton Books",
+        "yearOfPublishing": 1965
+      },
+      {
+        "bookId": 8,
+        "bookName": "The Hitchhiker's Guide to the Galaxy",
+        "author": "Douglas Adams",
+        "image": "https://example.com/images/the-hitchhiker's-guide-to-the-galaxy.jpg",
+        "review": "A hilarious and irreverent science fiction comedy that follows the adventures of Arthur Dent after the Earth is destroyed.",
+        "totalPages": 192,
+        "rating": 4.4,
+        "category": "Science Fiction Comedy",
+        "tags": ["Satire", "Humor", "Space Travel", "Aliens"],
+        "publisher": "Pan Books",
+        "yearOfPublishing": 1979
+      },
+      {
+        "bookId": 9,
+        "bookName": "Jane Eyre",
+        "author": "Charlotte Brontë",
+        "image": "https://example.com/images/jane-eyre.jpg",
+        "review": "A gothic novel exploring themes of love, social class, and self-discovery.",
+        "totalPages": 432,
+        "rating": 4.3,
+        "category": "Gothic Fiction",
+        "tags": ["Romance", "Coming-of-age", "Social Class", "Supernatural"],
+        "publisher": "Smith, Elder & Co.",
+        "yearOfPublishing": 1847
+      }
+    ]
+      
+  
