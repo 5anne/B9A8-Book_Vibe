@@ -1,5 +1,8 @@
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from "react-router-dom";
+import { getStoredBooks, saveAddedBooks } from '../../Utility/localStorage';
+import { getWishlist, saveWishlist } from '../../Utility/wishlist';
 
 
 
@@ -27,6 +30,37 @@ const BookDetails = () => {
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = bookDetail[0];
     console.log(bookDetail[0]);
     // console.log(bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing);
+
+    const notify = () => {
+        const idCheck = getStoredBooks();
+        console.log(idCheck);
+        const exists = idCheck.find(bookId => bookId === idInt);
+        console.log(exists);
+        if (!exists) {
+            toast('Mark as Read');
+        }
+        else {
+            toast('Already Marked as Read!');
+        }
+        saveAddedBooks(idInt);
+    }
+
+    const notifyWishlist = () => {
+        const wishCheck = getWishlist();
+        const idCheck = getStoredBooks();
+        const exists = wishCheck.find(bookId => bookId === idInt);
+        const existID = idCheck.find(bookId => bookId === idInt);
+        if(existID){
+            toast('Already Added to Read-list!');
+        }
+        else if (!exists) {
+            toast('Added to Wishlist');
+        }
+        else {
+            toast('Already Added to wishlist!');
+        }
+        saveWishlist(idInt);
+    }
 
 
     return (
@@ -59,9 +93,11 @@ const BookDetails = () => {
                         <p className="text-base text-[#131313] font-semibold my-2">{rating}</p>
                     </div>
                 </div>
-                <div className="my-2">
-                    <button className="text-[18px] text-[#131313] font-semibold border-[1px] border-[#1313134D] rounded-lg px-4 py-2 mr-2">Read</button>
-                    <button className="text-[18px] text-[#FFFFFF] font-semibold bg-[#50B1C9] rounded-lg px-4 py-2">Wishlist</button>
+                <div className="my-2 flex">
+                    <button onClick={notify} className="text-[18px] text-[#131313] font-semibold border-[1px] border-[#1313134D] rounded-lg px-4 py-2 mr-2">Read</button>
+                    <ToastContainer />
+                    <button onClick={notifyWishlist} className="text-[18px] text-[#FFFFFF] font-semibold bg-[#50B1C9] rounded-lg px-4 py-2">Wishlist</button>
+                    <ToastContainer />
                 </div>
             </div>
 

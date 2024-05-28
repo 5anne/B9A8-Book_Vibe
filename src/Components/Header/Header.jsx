@@ -4,9 +4,9 @@ import './Header.css'
 
 const Header = () => {
     const links = <>
-    <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/home">Home</NavLink></li>
-    <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/books">Listed Books</NavLink></li>
-    <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/pages">Pages to Read</NavLink></li>
+    <li><NavLink className={({ isActive }) => (isActive ? 'active' : 'text-[16px] font-semibold')} to="/home">Home</NavLink></li>
+    <li><NavLink className={({ isActive }) => (isActive ? 'active' : 'text-[16px] font-semibold')} to="/books">Listed Books</NavLink></li>
+    <li><NavLink className={({ isActive }) => (isActive ? 'active' : 'text-[16px] font-semibold')} to="/pages">Pages to Read</NavLink></li>
     </>
     return (
         <div className="flex items-center">
