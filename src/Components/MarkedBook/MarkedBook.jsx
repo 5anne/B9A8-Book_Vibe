@@ -1,9 +1,10 @@
 import { FiMapPin } from "react-icons/fi";
 import { IoPeopleOutline } from "react-icons/io5";
 import { MdInsertPageBreak } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const MarkedBook = ({ markedBook }) => {
-    const { bookName, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = markedBook;
+    const { bookId, bookName, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = markedBook;
     return (
         <div className="flex gap-8 border-[1px] rounded-2xl p-6 mt-8">
             <img className="bg-[#1313130D] rounded-2xl px-12 py-8 h-[250px]" src={image} alt="" />
@@ -24,7 +25,9 @@ const MarkedBook = ({ markedBook }) => {
                 <div className="mt-4">
                     <button className="text-[#328EFF] text-base bg-[#328EFF26] rounded-3xl px-4 py-1 mr-2">Category: {category}</button>
                     <button className="text-[#FFAC33] text-base bg-[#FFAC3326] rounded-3xl px-4 py-1 mr-2">Rating: {rating}</button>
-                    <button className="text-[#FFFFFF] text-base bg-[#23BE0A] rounded-3xl px-4 py-1">View Details</button>
+                    <Link to={`/details/${bookId}`}>
+                        <button className="text-[#FFFFFF] hover:bg-[#23BE0ACC] text-base bg-[#23BE0A] rounded-3xl px-4 py-1">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

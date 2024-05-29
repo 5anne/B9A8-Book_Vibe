@@ -1,7 +1,7 @@
 
 const getWishlist = () => {
     const storedWishlist = localStorage.getItem('added-wishlist');
-    console.log(storedWishlist);
+    // console.log(storedWishlist);
     if (storedWishlist) {
         return JSON.parse(storedWishlist);
     }
@@ -10,9 +10,9 @@ const getWishlist = () => {
 
 const saveWishlist = id => {
     const storedWishlist = getWishlist();
-    console.log(storedWishlist);
+    // console.log(storedWishlist);
     const exists = storedWishlist.find(bookId => bookId === id);
-    console.log(exists);
+    // console.log(exists);
     if (!exists) {
         storedWishlist.push(id);
         localStorage.setItem('added-wishlist', JSON.stringify(storedWishlist));

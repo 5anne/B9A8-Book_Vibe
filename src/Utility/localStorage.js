@@ -1,7 +1,7 @@
 
 const getStoredBooks = () => {
     const storedBooks = localStorage.getItem('added-books');
-    console.log(storedBooks);
+    // console.log(storedBooks);
     if (storedBooks) {
         return JSON.parse(storedBooks);
     }
@@ -10,9 +10,9 @@ const getStoredBooks = () => {
 
 const saveAddedBooks = id => {
     const storedBooks = getStoredBooks();
-    console.log(storedBooks);
+    // console.log(storedBooks);
     const exists = storedBooks.find(bookId => bookId === id);
-    console.log(exists);
+    // console.log(exists);
     if (!exists) {
         storedBooks.push(id);
         localStorage.setItem('added-books', JSON.stringify(storedBooks));

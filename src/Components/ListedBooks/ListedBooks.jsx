@@ -16,16 +16,29 @@ const ListedBooks = () => {
 
     const readList = [];
     const wishlist = [];
+    const secondWishlist = [];
 
     for (const id of idList) {
         const dataOfReadList = books.find(book => book.bookId === id);
         readList.push(dataOfReadList);
     }
-    console.log(readList);
-
+    
     for (const id of idWishlist) {
         const dataOfReadList = books.find(book => book.bookId === id);
         wishlist.push(dataOfReadList);
+    }
+
+    console.log(readList);
+    console.log(wishlist);
+
+    for (const book of readList){
+        // console.log(book);
+        for(const wBook of wishlist){
+            // console.log(wBook);
+        }
+        // const dataOfWishList = wishlist.find(wBook => wBook.bookId !== book.bookId)
+        // console.log(dataOfWishList);
+        // secondWishlist.push(dataOfWishList);
     }
 
     return (
@@ -57,7 +70,7 @@ const ListedBooks = () => {
                 <TabPanel>
                     <div>
                         {
-                            wishlist.map(markedBook => <WishBook key={markedBook.bookId} markedBook={markedBook}></WishBook>)
+                            secondWishlist.map(markedBook => <WishBook key={markedBook.bookId} markedBook={markedBook}></WishBook>)
                         }
                     </div>
                 </TabPanel>
