@@ -28,14 +28,14 @@ const BookDetails = () => {
 
     // const bookDetail = books?.find(book => book.bookId === idInt);
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = bookDetail[0];
-    console.log(bookDetail[0]);
+    // console.log(bookDetail[0]);
     // console.log(bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing);
 
     const notify = () => {
         const idCheck = getStoredBooks();
-        console.log(idCheck);
+        // console.log(idCheck);
         const exists = idCheck.find(bookId => bookId === idInt);
-        console.log(exists);
+        // console.log(exists);
         if (!exists) {
             toast('Mark as Read');
         }
