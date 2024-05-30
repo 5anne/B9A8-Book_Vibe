@@ -64,12 +64,12 @@ const BookDetails = () => {
 
 
     return (
-        <div className="my-10 grid grid-cols-2 gap-8">
+        <div className="my-10 grid lg:grid-cols-2 gap-8">
             <div className="flex justify-center bg-[#1313130D] p-8 rounded-lg h-[600px]">
                 <img src={image} alt="" />
             </div>
             <div className="h-full">
-                <h1 className="font-bold text-[40px] playfair-display">{bookName}</h1>
+                <h1 className="font-bold text-2xl lg:text-[40px] playfair-display">{bookName}</h1>
                 <p className="font-medium text-[#131313CC] text-[20px] border-b-[1px] solid py-4">By: {author}</p>
                 <p className="font-medium text-[#131313CC] text-[20px] border-b-[1px] solid py-4">{category}</p>
                 <p className="font-bold text-[#131313] text-base py-4">Review: <span className="text-[#131313B3] font-normal">{review}</span></p>

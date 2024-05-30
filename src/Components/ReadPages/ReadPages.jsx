@@ -29,7 +29,7 @@ export default function App() {
         readList.push(dataOfReadList);
     }
     return (
-        <div className='flex justify-center mt-12 bg-[#1313130D] rounded-xl p-8 w-full'>
+        <div className='flex justify-center mt-12 bg-[#1313130D] rounded-xl lg:p-8 w-full'>
             <BarChart
                 width={1200}
                 height={400}
