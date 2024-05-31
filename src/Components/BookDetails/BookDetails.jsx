@@ -3,6 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from "react-router-dom";
 import { getStoredBooks, saveAddedBooks } from '../../Utility/localStorage';
 import { getWishlist, saveWishlist } from '../../Utility/wishlist';
+import { useEffect, useState } from 'react';
 
 
 
@@ -10,11 +11,6 @@ const BookDetails = () => {
     const books = useLoaderData();
     const { id } = useParams();
     const idInt = parseInt(id);
-    // console.log(books);
-    // console.log(id);
-    // console.log(typeof id);
-    // console.log(idInt);
-    // console.log(typeof idInt);
 
     const bookDetail = [];
 
@@ -29,7 +25,7 @@ const BookDetails = () => {
     // const bookDetail = books?.find(book => book.bookId === idInt);
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = bookDetail[0];
     // console.log(bookDetail[0]);
-    // console.log(bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing);
+    // console.log(bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing);e, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing);
 
     const notify = () => {
         const idCheck = getStoredBooks();
@@ -50,7 +46,7 @@ const BookDetails = () => {
         const idCheck = getStoredBooks();
         const exists = wishCheck.find(bookId => bookId === idInt);
         const existID = idCheck.find(bookId => bookId === idInt);
-        if(existID){
+        if (existID) {
             toast('Already Added to Read-list!');
         }
         else if (!exists) {
