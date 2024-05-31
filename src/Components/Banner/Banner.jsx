@@ -11,7 +11,7 @@ const Banner = () => {
                 <h1 className="font-bold lg:text-5xl text-[#131313] lg:leading-relaxed playfair-display">Books to freshen up your bookshelf</h1>
                 <button className="font-semibold lg:text-xl text-[#FFFFFF] bg-[#23BE0A] rounded-lg px-4 py-2">{links}</button>
             </div>
-            <img className='w-40 lg:w-full' src="src/assets/pngwing 1.svg" alt="" />
+            <img className='w-40 lg:w-full' src="https://i.postimg.cc/N0csg9Xp/pngwing-1.png" alt="" />
         </div>
     );
 };
