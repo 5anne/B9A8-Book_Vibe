@@ -1,37 +1,32 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getStoredBooks, saveAddedBooks } from '../../Utility/localStorage';
 import { getWishlist, saveWishlist } from '../../Utility/wishlist';
-import { useEffect, useState } from 'react';
-
+import { useLoaderData } from 'react-router-dom';
 
 
 const BookDetails = () => {
     const books = useLoaderData();
+    // console.log(books);
+
     const { id } = useParams();
     const idInt = parseInt(id);
 
     const bookDetail = [];
 
     for (let i = 0; i < books.length; i++) {
-        // console.log(books[i]);
         if (books[i].bookId === idInt) {
-            // console.log(books[i].bookId);
             bookDetail.push(books[i]);
         }
     }
 
-    // const bookDetail = books?.find(book => book.bookId === idInt);
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = bookDetail[0];
-    // console.log(bookDetail[0]);
-    // console.log(bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing);e, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing);
+
 
     const notify = () => {
         const idCheck = getStoredBooks();
-        // console.log(idCheck);
         const exists = idCheck.find(bookId => bookId === idInt);
-        // console.log(exists);
         if (!exists) {
             toast('Mark as Read');
         }

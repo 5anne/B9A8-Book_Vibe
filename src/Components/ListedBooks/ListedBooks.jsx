@@ -53,7 +53,7 @@ const ListedBooks = () => {
         const sortedReadList = readList.sort(function (a, b) { return b.rating - a.rating });
         setReadList(sortedReadList);
     }
-    console.log(readList);
+    // console.log(readList);
 
     return (
         <div>

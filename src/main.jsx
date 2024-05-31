@@ -19,23 +19,23 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home></Home>,
       },
       {
         path: "/books",
         element: <ListedBooks></ListedBooks>,
-        loader: () => fetch('data.json')
+        loader: () => fetch('/data.json')
       },
       {
         path: "/pages",
         element: <ReadPages></ReadPages>,
-        loader: () => fetch('data.json')
+        loader: () => fetch('/data.json')
       },
       {
         path: "/details/:id",
         element: <BookDetails></BookDetails>,
-        loader: () => fetch('data.json')
+        loader: () => fetch('/data.json')
       }
     ]
   },
